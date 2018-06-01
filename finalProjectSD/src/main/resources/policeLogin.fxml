@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #3d517a;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.police.controller.PoliceLoginController">
+   <children>
+      <AnchorPane layoutX="408.0" layoutY="11.0" prefHeight="378.0" prefWidth="380.0" style="-fx-background-color: #3d517a;">
+         <children>
+            <PasswordField fx:id="tf_password" alignment="CENTER" layoutX="97.0" layoutY="189.0" promptText="Password" />
+            <TextField fx:id="tf_username" alignment="CENTER" layoutX="97.0" layoutY="107.0" promptText="Username" />
+            <Button fx:id="btn_login" layoutX="158.0" layoutY="271.0" mnemonicParsing="false" onAction="#pressedButton" text="Login" />
+            <Label layoutX="63.0" layoutY="38.0" text="Police Office Employee Sign In" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+         </children></AnchorPane>
+      <ImageView fitHeight="330.0" fitWidth="361.0" layoutX="59.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/police.jpg" />
+         </image>
+         <effect>
+            <DropShadow height="176.49" radius="87.16" width="174.15" />
+         </effect></ImageView>
+   </children>
+</AnchorPane>

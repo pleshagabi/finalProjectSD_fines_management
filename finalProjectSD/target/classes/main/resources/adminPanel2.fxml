@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: #acb3bf;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.admin.controller.AdminPanelController2">
+    <children>
+        <Button fx:id="viewAllUsersButton" layoutX="117.0" layoutY="435.0" mnemonicParsing="false" onAction="#viewAllUsersListener" prefHeight="37.0" prefWidth="144.0" text="View All Users">
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <TableView fx:id="table_1" layoutX="43.0" prefHeight="397.0" prefWidth="951.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="70.0" resizable="false" text="ID User" />
+                <TableColumn fx:id="userTypeColumn" prefWidth="128.0" resizable="false" text="User Type" />
+                <TableColumn fx:id="usernameColumn" prefWidth="127.0" resizable="false" text="Username" />
+                <TableColumn fx:id="passwordColumn" prefWidth="140.0" resizable="false" text="Password" />
+                <TableColumn fx:id="firstNameColumn" prefWidth="140.0" resizable="false" text="Firstname" />
+                <TableColumn fx:id="lastNameColumn" prefWidth="155.0" resizable="false" text="Lastname" />
+                <TableColumn fx:id="sexColumn" prefWidth="75.0" text="Sex" />
+                <TableColumn fx:id="ageColumn" prefWidth="75.0" text="Age" />
+            </columns>
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TableView>
+        <Button fx:id="searchByIdButton" layoutX="321.0" layoutY="436.0" mnemonicParsing="false" onAction="#searchUserByIdListener" prefHeight="37.0" prefWidth="137.0" text="Search by User ID">
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <Separator layoutX="994.0" layoutY="-13.0" orientation="VERTICAL" prefHeight="429.0" prefWidth="41.0" />
+        <TableView fx:id="table_2" layoutX="1032.0" prefHeight="397.0" prefWidth="843.0">
+            <columns>
+                <TableColumn fx:id="idActivityColumn" prefWidth="81.0" text="ID Activity" />
+                <TableColumn fx:id="dateColumn" prefWidth="122.0" text="Date" />
+                <TableColumn fx:id="activityColumn" minWidth="3.0" prefWidth="554.0" text="Activity" />
+                <TableColumn fx:id="idUserColumn" minWidth="0.0" prefWidth="65.0" text="ID User" />
+            </columns>
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TableView>
+        <Button fx:id="viewAllActivitiesButton" layoutX="1091.0" layoutY="435.0" mnemonicParsing="false" onAction="#viewAllUserActivityListener" prefHeight="37.0" prefWidth="144.0" text="View All Activities">
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <Button layoutX="1292.0" layoutY="435.0" mnemonicParsing="false" onAction="#searchActivityByIdListener" prefHeight="37.0" prefWidth="163.0" text="Search by Activity ID">
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <Button layoutX="1516.0" layoutY="435.0" mnemonicParsing="false" onAction="#findActivitiesOfUserListener" prefHeight="37.0" prefWidth="187.0" text="Find Activities of User">
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <Separator layoutX="-6.0" layoutY="412.0" prefHeight="12.0" prefWidth="1976.0" />
+        <TextField fx:id="tfUserId" alignment="CENTER" layoutX="258.0" layoutY="525.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter a User ID">
+            <effect>
+                <InnerShadow />
+            </effect></TextField>
+        <Label layoutX="126.0" layoutY="517.0" prefHeight="48.0" prefWidth="126.0" text="User ID">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="124.0" layoutY="569.0" text="User Type">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Button layoutX="519.0" layoutY="436.0" mnemonicParsing="false" onAction="#searchByUsernameListener" prefHeight="37.0" prefWidth="163.0" text="Search by Username">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <TextField fx:id="tfUsername" alignment="CENTER" layoutX="258.0" layoutY="615.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter a Username">
+            <effect>
+                <InnerShadow />
+            </effect></TextField>
+        <Separator layoutX="14.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="1036.0" prefWidth="17.0" />
+        <Separator layoutX="-6.0" layoutY="957.0" prefHeight="12.0" prefWidth="1946.0" />
+        <Separator layoutX="1896.0" layoutY="-7.0" orientation="VERTICAL" prefHeight="1043.0" prefWidth="6.0" />
+        <Label layoutX="1091.0" layoutY="547.0" prefWidth="126.0" text="Activity ID">
+            <font>
+                <Font size="25.0" />
+            </font></Label>
+        <Label layoutX="1093.0" layoutY="657.0" text="Activity Date">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfActivityId" alignment="CENTER" layoutX="1268.0" layoutY="550.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter an ID">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <TextField fx:id="tfActivityDetails" alignment="CENTER" layoutX="1268.0" layoutY="605.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter Description">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <Button fx:id="logoutButton" layoutX="904.0" layoutY="903.0" mnemonicParsing="false" onAction="#logoutListener" prefHeight="29.0" prefWidth="106.0" text="Logout">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <Label layoutX="1093.0" layoutY="602.0" text="Activity Details">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="144.0" fitWidth="204.0" layoutX="754.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/admin.png" />
+            </image>
+            <effect>
+                <DropShadow height="124.39" radius="43.0375" width="49.76" />
+            </effect>
+        </ImageView>
+        <Label layoutX="123.0" layoutY="613.0" text="Username">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="userTypeChoice" layoutX="258.0" layoutY="570.0" prefHeight="31.0" prefWidth="187.0">
+            <effect>
+                <InnerShadow />
+            </effect></ChoiceBox>
+        <Label layoutX="127.0" layoutY="663.0" text="Password">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="125.0" layoutY="710.0" text="Firstname">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="127.0" layoutY="757.0" text="Lastname">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="126.0" layoutY="799.0" text="User Sex">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="sexChoice" layoutX="258.0" layoutY="801.0" prefHeight="31.0" prefWidth="187.0">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </ChoiceBox>
+        <Label layoutX="128.0" layoutY="846.0" text="User Age">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfPassword" alignment="CENTER" layoutX="258.0" layoutY="666.0" promptText="Enter a Password">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <TextField fx:id="tfFirstname" alignment="CENTER" layoutX="258.0" layoutY="713.0" promptText="Enter Firstname">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <TextField fx:id="tfLastname" alignment="CENTER" layoutX="258.0" layoutY="759.0" promptText="Enter Lastname">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <TextField fx:id="tfAge" alignment="CENTER" layoutX="258.0" layoutY="848.0" promptText="Enter User Age">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <Label layoutX="1092.0" layoutY="710.0" text="For User ID">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfUserIdForActivity" alignment="CENTER" layoutX="1268.0" layoutY="713.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter a User ID">
+            <effect>
+                <InnerShadow />
+            </effect></TextField>
+        <DatePicker fx:id="activityDatePicker" layoutX="1268.0" layoutY="660.0" prefHeight="31.0" prefWidth="187.0" promptText="Pick a date">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </DatePicker>
+        <Button layoutX="134.0" layoutY="909.0" mnemonicParsing="false" onAction="#addUserListener" prefHeight="31.0" prefWidth="87.0" text="Add">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <Button layoutX="245.0" layoutY="906.0" mnemonicParsing="false" onAction="#updateUserListener" prefHeight="31.0" prefWidth="87.0" text="Update">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <Button layoutX="358.0" layoutY="906.0" mnemonicParsing="false" onAction="#deleteUserListener" prefHeight="31.0" prefWidth="87.0" text="Delete">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <Button layoutX="1090.0" layoutY="775.0" mnemonicParsing="false" onAction="#addActivityListener" prefHeight="31.0" prefWidth="101.0" text="Add">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <Button layoutX="1222.0" layoutY="775.0" mnemonicParsing="false" onAction="#updateActivityListener" prefHeight="31.0" prefWidth="101.0" text="Update">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <Button layoutX="1351.0" layoutY="775.0" mnemonicParsing="false" onAction="#deleteActivityListener" prefHeight="31.0" prefWidth="101.0" text="Delete">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <Label layoutX="691.0" layoutY="608.0" text="Administrator Panel">
+            <font>
+                <Font size="31.0" />
+            </font>
+        </Label>
+      <Label layoutX="834.0" layoutY="967.0" text="Logged in as user:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" layoutX="1003.0" layoutY="967.0" text="username">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="990.0" prefWidth="1298.0" style="-fx-background-color: #3d517a;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.police.controller.PoliceDrivingLicenseController">
+    <children>
+        <ImageView fitHeight="193.0" fitWidth="432.0" layoutX="611.0" layoutY="777.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/license.png" />
+            </image>
+            <effect>
+                <InnerShadow radius="15.6325" width="43.53" />
+            </effect></ImageView>
+        <Button fx:id="viewAllLicensesButton" layoutX="81.0" layoutY="435.0" mnemonicParsing="false" onAction="#viewAllLicensesListener" prefHeight="37.0" prefWidth="144.0" text="View All">
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <TableView fx:id="table_1" layoutX="43.0" prefHeight="397.0" prefWidth="1212.0">
+            <columns>
+                <TableColumn fx:id="licenseIdColumn" prefWidth="77.00003051757812" resizable="false" text="License ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="138.0" resizable="false" text="Driver Name" />
+                <TableColumn fx:id="dateOfBirthColumn" prefWidth="101.0" resizable="false" text="Date of Birth" />
+                <TableColumn fx:id="placeOfBirthColumn" prefWidth="111.0" resizable="false" text="Place of Birth" />
+                <TableColumn fx:id="issuedByColumn" prefWidth="144.0" resizable="false" text="Issued By" />
+                <TableColumn fx:id="issuedDateColumn" prefWidth="89.0" resizable="false" text="Issued Date" />
+            <TableColumn fx:id="validUntilColumn" prefWidth="85.0" text="Valid Until" />
+            <TableColumn fx:id="licenseCodeColumn" prefWidth="120.0" text="License Code" />
+            <TableColumn fx:id="categoriesColumn" prefWidth="114.0" text="Categories" />
+            <TableColumn fx:id="pointsColumn" prefWidth="55.0" text="Points" />
+            <TableColumn fx:id="driverIdColumn" prefWidth="70.0" text="Driver ID" />
+            <TableColumn fx:id="suspendedColumn" prefWidth="85.0" text="Suspended" />
+            </columns>
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TableView>
+        <Button fx:id="searchByIdButton" layoutX="315.0" layoutY="435.0" mnemonicParsing="false" onAction="#searchLicenseByIdListener" prefHeight="37.0" prefWidth="137.0" text="Search by ID">
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <Separator layoutX="1255.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="993.0" prefWidth="41.0" />
+        <Separator layoutX="-6.0" layoutY="398.0" prefHeight="37.0" prefWidth="1311.0" />
+        <TextField fx:id="tfLicenseId" alignment="CENTER" layoutX="332.0" layoutY="536.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter a License ID">
+            <effect>
+                <InnerShadow />
+            </effect></TextField>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="103.0" layoutY="533.0" prefHeight="36.0" prefWidth="204.0" text="Driving License ID" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="102.0" layoutY="586.0" text="Driver Name" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Button layoutX="542.0" layoutY="435.0" mnemonicParsing="false" onAction="#searchByDriverNameListener" prefHeight="37.0" prefWidth="137.0" text="Search by Name">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <TextField fx:id="tfDriverName" alignment="CENTER" layoutX="334.0" layoutY="588.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter a Driver Name">
+            <effect>
+                <InnerShadow />
+            </effect></TextField>
+        <Separator layoutX="14.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="993.0" prefWidth="17.0" />
+        <Separator layoutX="-14.0" layoutY="947.0" prefHeight="37.0" prefWidth="1311.0" />
+        <TextField fx:id="tfLicensePoints" alignment="CENTER" layoutX="783.0" layoutY="637.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter Penalty Points">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <Label contentDisplay="CENTER" layoutX="102.0" layoutY="635.0" text="Driver Date of Birth" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label contentDisplay="CENTER" layoutX="102.0" layoutY="686.0" text="Driver Place of Birth" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label contentDisplay="CENTER" layoutX="101.0" layoutY="739.0" text="Issued By" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="101.0" layoutY="790.0" text="Issued Date" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfBirthPlace" alignment="CENTER" layoutX="334.0" layoutY="689.0" promptText="Enter a Birth Place">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <TextField fx:id="tfIssuedBy" alignment="CENTER" layoutX="334.0" layoutY="740.0" promptText="Enter the Issuer">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <TextField fx:id="tfDrivingCategories" alignment="CENTER" layoutX="783.0" layoutY="588.0" promptText="Enter Driving Categories">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <Label layoutX="577.0" layoutY="635.0" text="License Points" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label layoutX="577.0" layoutY="586.0" text="Driving Categories" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfDriverId" alignment="CENTER" layoutX="783.0" layoutY="689.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter a Driver ID">
+            <effect>
+                <InnerShadow />
+            </effect></TextField>
+        <Button fx:id="addDriverButton" layoutX="81.0" layoutY="916.0" mnemonicParsing="false" onAction="#addLicenseListener" prefHeight="31.0" prefWidth="112.0" text="Add">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <Button fx:id="updateDriverButton" layoutX="259.0" layoutY="917.0" mnemonicParsing="false" onAction="#updateLicenseListener" prefHeight="31.0" prefWidth="112.0" text="Update">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <Button fx:id="deleteDriverButton" layoutX="440.0" layoutY="917.0" mnemonicParsing="false" onAction="#deleteLicenseListener" prefHeight="31.0" prefWidth="112.0" text="Delete">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <DatePicker fx:id="birthDatePicker" layoutX="332.0" layoutY="637.0" prefHeight="31.0" prefWidth="187.0" promptText="Pick a Date">
+            <effect>
+                <InnerShadow />
+            </effect></DatePicker>
+        <DatePicker fx:id="issuedDatePicker" layoutX="334.0" layoutY="793.0" prefHeight="31.0" prefWidth="187.0" promptText="Pick a Date">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </DatePicker>
+        <Label layoutX="577.0" layoutY="687.0" text="For Driver ID" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tfLicenseCode" alignment="CENTER" layoutX="783.0" layoutY="536.0" promptText="Enter the License Code">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <Label layoutX="577.0" layoutY="533.0" text="License Code" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+      <Label layoutX="104.0" layoutY="839.0" prefHeight="36.0" prefWidth="124.0" text="Valid Until" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="validUntilDatePicker" layoutX="334.0" layoutY="842.0" prefHeight="31.0" prefWidth="187.0" promptText="Pick a Date">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </DatePicker>
+      <Label layoutX="577.0" layoutY="739.0" text="Suspended" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="suspendedChoice" layoutX="783.0" layoutY="742.0" prefHeight="31.0" prefWidth="187.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ChoiceBox>
+    </children>
+</AnchorPane>

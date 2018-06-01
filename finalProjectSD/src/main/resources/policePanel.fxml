@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: #3d517a;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.police.controller.PolicePanelController">
+    <children>
+        <ImageView fitHeight="143.0" fitWidth="144.0" layoutX="718.0" layoutY="755.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/badge.jpg" />
+            </image>
+            <effect>
+            <InnerShadow radius="15.6325" width="43.53" />
+            </effect></ImageView>
+        <Button fx:id="viewAllDriversButton" layoutX="81.0" layoutY="435.0" mnemonicParsing="false" onAction="#viewAllDrivers" prefHeight="37.0" prefWidth="144.0" text="View All">
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <TableView fx:id="table_1" layoutX="43.0" prefHeight="397.0" prefWidth="926.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="77.00003051757812" resizable="false" text="ID Driver" />
+                <TableColumn fx:id="nameColumn" prefWidth="153.00003051757812" resizable="false" text="Name" />
+                <TableColumn fx:id="ageColumn" prefWidth="51.000030517578125" resizable="false" text="Age" />
+                <TableColumn fx:id="addressColumn" prefWidth="186.0" resizable="false" text="Address" />
+                <TableColumn fx:id="emailColumn" prefWidth="235.0" resizable="false" text="E-Mail" />
+                <TableColumn fx:id="phoneColumn" prefWidth="201.0" resizable="false" text="Phone Number" />
+            </columns>
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TableView>
+        <Button fx:id="searchByIdButton" layoutX="258.0" layoutY="435.0" mnemonicParsing="false" onAction="#viewDriverByID" prefHeight="37.0" prefWidth="137.0" text="Search by ID">
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <Separator layoutX="969.0" layoutY="-7.0" orientation="VERTICAL" prefHeight="424.0" prefWidth="41.0" />
+        <TableView fx:id="table_2" layoutX="1010.0" prefHeight="397.0" prefWidth="867.0">
+            <columns>
+                <TableColumn fx:id="idFineColumn" prefWidth="75.0" text="ID Fine" />
+                <TableColumn fx:id="dateCommitedColumn" prefWidth="121.0" text="Date Commited" />
+                <TableColumn fx:id="crimeColumn" minWidth="3.0" prefWidth="232.0" text="Crime" />
+                <TableColumn fx:id="finePriceColumn" prefWidth="120.0" text="Fine Price" />
+                <TableColumn fx:id="deadlineColumn" prefWidth="124.0" text="Deadline Date" />
+            <TableColumn fx:id="driverIdFineColumn" prefWidth="90.0" text="Driver ID" />
+            <TableColumn fx:id="pointsColumn" prefWidth="86.0" text="Point(s)" />
+            </columns>
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TableView>
+        <Button layoutX="1237.0" layoutY="435.0" mnemonicParsing="false" onAction="#viewFineById" prefHeight="37.0" prefWidth="143.0" text="Search Fine by ID">
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <Button layoutX="1403.0" layoutY="435.0" mnemonicParsing="false" onAction="#viewFinesByDriverId" prefHeight="37.0" prefWidth="159.0" text="Find Fines of Driver">
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <Separator layoutX="-6.0" layoutY="398.0" prefHeight="37.0" prefWidth="1955.0" />
+        <TextField fx:id="tfDriverID" alignment="CENTER" layoutX="281.0" layoutY="530.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter a Driver ID">
+            <effect>
+                <InnerShadow />
+            </effect></TextField>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="530.0" prefHeight="31.0" prefWidth="112.0" text="Driver ID" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="102.0" layoutY="586.0" text="Driver Name" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </Label>
+        <Button layoutX="427.0" layoutY="435.0" mnemonicParsing="false" onAction="#viewDriverByName" prefHeight="37.0" prefWidth="137.0" text="Search by Name">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+        <TextField fx:id="tfDriverName" alignment="CENTER" layoutX="281.0" layoutY="588.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter a Name">
+            <effect>
+                <InnerShadow />
+            </effect></TextField>
+        <Separator layoutX="14.0" layoutY="-18.0" orientation="VERTICAL" prefHeight="1082.0" prefWidth="17.0" />
+        <Separator layoutX="-14.0" layoutY="947.0" prefHeight="37.0" prefWidth="1988.0" />
+        <Separator layoutX="1894.0" layoutY="-7.0" orientation="VERTICAL" prefHeight="1049.0" prefWidth="3.0" />
+        <ImageView fitHeight="296.0" fitWidth="167.0" layoutX="1668.0" layoutY="598.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/cop3.gif" />
+            </image>
+            <effect>
+                <DropShadow height="255.0" radius="127.0" width="255.0" />
+            </effect></ImageView>
+        <Label alignment="CENTER" layoutX="1075.0" layoutY="497.0" prefWidth="126.0" text="Fine ID" textFill="WHITE">
+            <font>
+                <Font size="25.0" />
+            </font></Label>
+        <TextField fx:id="tfFineID" alignment="CENTER" layoutX="1256.0" layoutY="500.0" prefHeight="31.0" prefWidth="187.0" promptText="Enter Fine ID">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </TextField>
+        <Button layoutX="1610.0" layoutY="541.0" mnemonicParsing="false" onAction="#viewFinesByCategory" prefHeight="37.0" prefWidth="151.0" text="Fines By Category">
+            <effect>
+                <InnerShadow />
+            </effect></Button>
+        <Button fx:id="logoutButton" layoutX="737.0" layoutY="916.0" mnemonicParsing="false" onAction="#logoutListener" prefHeight="29.0" prefWidth="106.0" text="Logout">
+            <effect>
+                <InnerShadow />
+            </effect>
+        </Button>
+      <Label contentDisplay="CENTER" layoutX="102.0" layoutY="635.0" text="Driver Age" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="102.0" layoutY="686.0" text="Driver Address" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="CENTER" layoutX="101.0" layoutY="739.0" text="Driver E-mail" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="101.0" layoutY="790.0" text="Driver Phone" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfDriverAge" alignment="CENTER" layoutX="281.0" layoutY="637.0" promptText="Enter a Driver Age">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="tfDriverAddress" alignment="CENTER" layoutX="281.0" layoutY="689.0" promptText="Enter an Address">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="tfDriverEmail" alignment="CENTER" layoutX="281.0" layoutY="742.0" promptText="Enter an E-mail">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="tfDriverPhone" alignment="CENTER" layoutX="281.0" layoutY="795.0" promptText="Enter a Phone Number">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Label layoutX="1103.0" layoutY="586.0" text="Date Crime Commited" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="1102.0" layoutY="635.0" text="Crime Type" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="1101.0" layoutY="686.0" text="Fine Price" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="1103.0" layoutY="737.0" text="Fine Deadline Date" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="1103.0" layoutY="790.0" text="Fine Is Paid" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfFinePrice" alignment="CENTER" layoutX="1258.0" layoutY="689.0" prefHeight="31.0" prefWidth="253.0" promptText="Enter a Fine Price">
+         <effect>
+            <InnerShadow />
+         </effect></TextField>
+      <Label layoutX="1495.0" layoutY="500.0" text="Category" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfCategory" alignment="CENTER" layoutX="1609.0" layoutY="500.0" onAction="#viewFinesByCategory" prefHeight="31.0" prefWidth="150.0" promptText="Enter a Category">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Button fx:id="viewAllFinesButton" layoutX="1089.0" layoutY="435.0" mnemonicParsing="false" onAction="#viewAllFines" prefHeight="37.0" prefWidth="125.0" text="View All">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="addDriverButton" layoutX="95.0" layoutY="857.0" mnemonicParsing="false" onAction="#addDriverListener" prefHeight="31.0" prefWidth="112.0" text="Add">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="updateDriverButton" layoutX="241.0" layoutY="857.0" mnemonicParsing="false" onAction="#updateDriverListener" prefHeight="31.0" prefWidth="112.0" text="Update">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="deleteDriverButton" layoutX="384.0" layoutY="857.0" mnemonicParsing="false" onAction="#deleteDriverListener" prefHeight="31.0" prefWidth="112.0" text="Delete">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button layoutX="1099.0" layoutY="901.0" mnemonicParsing="false" onAction="#addFineListener" prefHeight="31.0" prefWidth="106.0" text="Add">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button layoutX="1227.0" layoutY="901.0" mnemonicParsing="false" onAction="#updateFineListener" prefHeight="31.0" prefWidth="112.0" text="Update">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button layoutX="1367.0" layoutY="901.0" mnemonicParsing="false" onAction="#deleteFineListener" prefHeight="31.0" prefWidth="112.0" text="Delete">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <ChoiceBox fx:id="crimeChoice" layoutX="1257.0" layoutY="637.0" prefHeight="31.0" prefWidth="253.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ChoiceBox>
+      <DatePicker fx:id="dateCommitted" layoutX="1367.0" layoutY="588.0" promptText="Pick a Date">
+         <effect>
+            <InnerShadow />
+         </effect></DatePicker>
+      <DatePicker fx:id="deadlineDate" layoutX="1327.0" layoutY="740.0" promptText="Pick a Date">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </DatePicker>
+      <ChoiceBox fx:id="choiceIsPaid" layoutX="1262.0" layoutY="793.0" prefHeight="31.0" prefWidth="253.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ChoiceBox>
+      <Label layoutX="699.0" layoutY="570.0" text="Generate Report" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="547.0" layoutY="612.0" text="Generate report with drivers who did not paid the fine untill the deadline date" textFill="WHITE" />
+      <Label layoutX="636.0" layoutY="635.0" text="Report Format" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="reportChoice" layoutX="795.0" layoutY="637.0" prefWidth="150.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ChoiceBox>
+      <Button layoutX="750.0" layoutY="677.0" mnemonicParsing="false" onAction="#generateReportListener" prefHeight="37.0" prefWidth="90.0" text="Generate">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Label layoutX="1101.0" layoutY="541.0" text="For Driver ID" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfDriverIdForFine" alignment="CENTER" layoutX="1256.0" layoutY="544.0" promptText="Enter a Driver ID">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Label layoutX="1104.0" layoutY="839.0" text="Points" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfPoints" alignment="CENTER" layoutX="1262.0" layoutY="842.0" promptText="Enter Penalty Points">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Button layoutX="596.0" layoutY="435.0" mnemonicParsing="false" onAction="#createDrivingLicensePanelListener" prefHeight="37.0" prefWidth="218.0" text="Modify Driving License Data">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Label layoutX="867.0" layoutY="479.0" text="Notification(s)" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="870.0" layoutY="437.0" mnemonicParsing="false" onAction="#viewNotificationListener" prefHeight="35.0" prefWidth="78.0" text="View">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <ImageView fitHeight="64.0" fitWidth="68.0" layoutX="958.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/mesage3.png" />
+         </image>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ImageView>
+      <Label fx:id="labelNotifications" layoutX="978.0" layoutY="403.0" text="0" textFill="RED">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+      <Button layoutX="1703.0" layoutY="915.0" mnemonicParsing="false" onAction="#markFineAsPaidListener" prefHeight="35.0" prefWidth="139.0" text="Mark Fine As Paid">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Label layoutX="670.0" layoutY="966.0" text="Logged in as user:" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameLabel" layoutX="838.0" layoutY="966.0" text="username" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="1585.0" layoutY="436.0" mnemonicParsing="false" onAction="#finesHistoryListener" prefHeight="36.0" prefWidth="182.0" text="Fines History of Driver">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+    </children>
+</AnchorPane>
